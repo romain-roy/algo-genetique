@@ -1,23 +1,21 @@
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Toolkit;
+package algoGenetique;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class Panneau extends JPanel {
 
-	private static final long serialVersionUID = -1941057958873989091L;
+	private static final long serialVersionUID = 1L;
 	private Individu indiv;
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+
 		int taille = (int)this.getHeight();
 
-		for (Ville v : Villes.getVilles()){
+		for (Ville v : Villes.getVilles())
 			g.fillOval((int)(v.getCoordX() * taille) - 2, (int) (-v.getCoordY() * taille + taille - 2), 5, 5);
-		}
 
 		g.setColor(new Color(255, 0, 0));
 		if (indiv != null) {
@@ -34,7 +32,7 @@ public class Panneau extends JPanel {
 		}
 	}
 
-	public void récupérerMeilleurIndiv(Population p) {
+	public void recupMeilleurIndiv(Population p) {
 		this.indiv = p.meilleurIndividu();
 		repaint();
 	}

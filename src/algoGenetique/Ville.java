@@ -1,8 +1,10 @@
+package algoGenetique;
+
 public class Ville {
-	
+
 	private double coordX;
 	private double coordY;
-	
+
 	public Ville(double coordX, double coordY){
 		this.coordX = coordX;
 		this.coordY = coordY;
@@ -20,11 +22,11 @@ public class Ville {
 	public double getCoordY() {
 		return coordY;
 	}
-	
+
 	public void setCoordX(double coordX) {
 		this.coordX = coordX;
 	}
-	
+
 	public void setCoordY(double coordY) {
 		this.coordY = coordY;
 	}
@@ -38,7 +40,7 @@ public class Ville {
 		if (getClass() != obj.getClass())
 			return false;
 		Ville other = (Ville) obj;
-		if(this.coordX != other.coordX || this.coordY != other.coordY)
+		if (this.coordX != other.coordX || this.coordY != other.coordY)
 			return false;
 		return true;
 	}
