@@ -38,8 +38,10 @@ public class Main {
 			panneau.recupMeilleurIndiv(p);
 			System.out.println("Génération n°" + i + " : " + p.getPopulation().get(0).performance());
 			// Thread.sleep(1000);
-			longueur.setText("Longueur du chemin : " + p.getPopulation().get(0).performance() + "          ");
+			longueur.setText(" Longueur du chemin : " + String.format("%.4f", p.getPopulation().get(0).performance()) + "          ");
 			temps.setText("Fonctionne depuis " + (System.currentTimeMillis() - startTime) / 1000 + " secondes");
 		}
 	}
 }
+
+// Meilleur resultat : 11.8093
